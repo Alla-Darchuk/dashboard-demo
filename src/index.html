@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title>Dashboard test</title>
+    <link rel="stylesheet" href="images/icomoon/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&amp;display=swap">
+    <style>
+       body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  background-color: #FAFBFF;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 306px;
+  background-color: white;
+  padding: 28px;
+}
+nav .nav_header {
+  padding: 36px auto 20px 0px;
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+}
+nav .nav_header span {
+  font-size: 10px;
+  color: #9197b3;
+}
+nav ul {
+  list-style-type: none;
+  margin: 20px 0px;
+  padding: 0;
+  font-size: 14px;
+}
+nav ul .item-section {
+  display: grid;
+  grid-template-columns: 24px auto 20px;
+  gap: 14px;
+  color: #9197b3;
+  max-width: 250px;
+  width: 250px;
+  height: 24px;
+  align-items: center;
+  padding: 11px;
+  margin: 10px 0px;
+  border-radius: 8px;
+}
+nav ul .item-section:hover {
+  background-color: #5932EA;
+  color: #fff;
+}
+nav .nav_footer {
+  display: flex;
+}
+nav .nav_footer img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+nav .nav_footer h2 {
+  margin: 0;
+  font-size: 14px;
+}
+nav .nav_footer p {
+  margin: 0;
+  font-size: 12px;
+  color: #9197b3;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.chevron {
+  font-size: 16px;
+}
+
+.content {
+  background-color: #FAFBFF;
+  padding-top: 41px;
+  padding-left: 71px;
+}
+.content .header {
+  color: black;
+}
+.content .header h1 {
+  font-size: 24px;
+}
+.content .division {
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px 38px 45px 38px;
+}
+.content .division .division-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.content .division .division-header .information h2 {
+  margin: 0;
+  font-size: 22px;
+}
+.content .division .division-header .information p {
+  color: #16C098;
+  font-size: 14px;
+}
+.content .division .division-header .search {
+  border: none;
+  border-radius: 10px;
+  background-color: #FAFBFF;
+  width: 216px;
+  color: #9197b3;
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+.content .division .division-header .search .icon {
+  color: #9197b3;
+  width: 24px;
+  height: 24px;
+  margin: 7px 8px;
+}
+.content .division .division-header .search input {
+  width: 100%;
+  border: none;
+  background: none;
+}
+.content .division .division-header .search input::-moz-placeholder {
+  color: #9197b3;
+}
+.content .division .division-header .search input::placeholder {
+  color: #9197b3;
+}
+.content .division .division-header .search input:focus, .content .division .division-header .search input:hover {
+  outline: none;
+  border: none;
+}
+.content .division .table {
+  font-size: 14px;
+}
+.content .division .table .table-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr 1fr;
+  color: #9197b3;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  margin-bottom: 25px;
+}
+.content .division .table .table-head .status {
+  text-align: center;
+}
+.content .division .table .table-body {
+  display: grid;
+  grid-template-areas: "a b c d e f" "g g g g g g";
+  grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr 1fr;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  row-gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #292D32;
+}
+.content .division .table .table-body .grid-a {
+  grid-area: a;
+}
+.content .division .table .table-body .grid-b {
+  grid-area: b;
+}
+.content .division .table .table-body .grid-c {
+  grid-area: c;
+}
+.content .division .table .table-body .grid-d {
+  grid-area: d;
+}
+.content .division .table .table-body .grid-e {
+  grid-area: e;
+}
+.content .division .table .table-body .grid-f {
+  grid-area: f;
+}
+.content .division .table .table-body .line {
+  grid-area: g;
+  width: 98%;
+  height: 1px;
+  background-color: #9197b3;
+}
+.content .division .table .table-body .status {
+  width: 80px;
+  height: 30px;
+  justify-self: center;
+  align-self: center;
+  border: solid 1px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .division .table .table-body .active {
+  background-color: rgba(22, 192, 152, 0.5803921569);
+  border-color: #008767;
+}
+.content .division .table .table-body .active span {
+  color: #008767;
+}
+.content .division .table .table-body .inactive {
+  background-color: #FFC5C5;
+  border-color: #DF0404;
+}
+.content .division .table .table-body .inactive span {
+  color: #DF0404;
+}
+.content .division footer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .division footer span {
+  font-size: 14px;
+  color: #9197b3;
+}
+.content .division footer .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.content .division footer .buttons span {
+  color: #292D32;
+}
+.content .division footer .buttons button {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #EEEEEE;
+  border-radius: 4px;
+  margin: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .division footer .buttons button span {
+  font-weight: bold;
+  font-size: 12px;
+  color: #9197b3;
+  margin: 0;
+  padding: 0;
+}
+.content .division footer .buttons .active {
+  color: rgba(22, 192, 152, 0.5803921569);
+  background-color: rgba(22, 192, 152, 0.5803921569);
+  border-color: #008767;
+}
+.content .division footer .buttons .active span {
+  color: white;
+}
+
+@media screen and (max-width: 720px) {
+  nav {
+    width: 60px;
+    padding: 10px;
+  }
+  nav .item-section {
+    width: 15px;
+  }
+  nav h1 {
+    display: none;
+  }
+  nav .section {
+    display: none;
+  }
+  nav .user-information {
+    display: none;
+  }
+  .content {
+    margin: 10px;
+    padding: 0px;
+  }
+  .content .division {
+    padding: 10px 10px 25px 10px;
+  }
+  .content .division .table .table-body, .content .division .table .table-head {
+    gap: 10px;
+  }
+  .content .division .table .table-body .status, .content .division .table .table-head .status {
+    width: 50%;
+  }
+  .content .division footer {
+    flex-wrap: wrap;
+  }
+  .content .division footer .buttons {
+    margin: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */
+    </style>
+  </head>
+  <body> 
+    <nav> 
+      <content> 
+        <header class="nav_header"> <img src="images/logo.svg" alt="">
+          <h1>
+             Dashboard <span>v.01</span></h1>
+        </header>
+        <ul> 
+          <li class="item-section"><span class="icon-dashboard icon"></span><span class="section">Dashboard</span>
+          </li>
+          <li class="item-section"><span class="icon-product icon"></span><span class="section">Product</span><span class="icon-chevron-right chevron"></span>
+          </li>
+          <li class="item-section"><span class="icon-customers icon"></span><span class="section">Customers</span><span class="icon-chevron-right chevron"></span>
+          </li>
+          <li class="item-section"><span class="icon-income icon"></span><span class="section">Income</span><span class="icon-chevron-right chevron"></span>
+          </li>
+          <li class="item-section"><span class="icon-promote icon"></span><span class="section">Promote</span><span class="icon-chevron-right chevron"></span>
+          </li>
+          <li class="item-section"><span class="icon-help icon"></span><span class="section">Help</span><span class="icon-chevron-right chevron"></span>
+          </li>
+        </ul>
+      </content>
+      <footer class="nav_footer"> <img src="images/Ellipse 8.png" alt="">
+        <div class="user-information"> 
+          <h2>Ivan</h2>
+          <p>Project Manager</p>
+        </div>
+      </footer>
+    </nav>
+    <div class="content">
+      <header> 
+        <div class="header"> 
+          <h1>
+             Hello Evano<span>👋🏼</span>,</h1>
+        </div>
+      </header>
+      <div class="division">
+        <div class="division-header"> 
+          <div class="information"> 
+            <h2>All Customers </h2>
+            <p>Active Members</p>
+          </div>
+          <div class="search">
+            <div class="icon icon-search"></div>
+            <input type="search" placeholder="Search">
+          </div>
+        </div>
+        <div class="table"> 
+          <div class="table-head"><span>Customer Name </span><span>Company </span><span>Phone Number</span><span>Email </span><span>Country</span><span class="status">Status</span></div>
+          <div class="table-body"><span class="grid-a">Jane Cooper</span><span class="grid-b">Microsoft</span><span class="grid-c">(225)555-0118</span><span class="grid-d">jane@microsoft.com</span><span class="grid-e">United States</span>
+            <div class="status active grid-f"><span>Active</span></div>
+            <div class="line"></div>
+          </div>
+          <div class="table-body"><span class="grid-a">Floyd Miles</span><span class="grid-b">Yahoo</span><span class="grid-c">(205)555-0100</span><span class="grid-d">floyd@yahoo.com</span><span class="grid-e">Kiribati</span>
+            <div class="status inactive grid-f"><span>Inactive</span></div>
+            <div class="line"></div>
+          </div>
+          <div class="table-body"><span class="grid-a">Ronald Richards</span><span class="grid-b">Adobe</span><span class="grid-c">(302)555-0107</span><span class="grid-d">ronald@adobe.com</span><span class="grid-e">Israel</span>
+            <div class="status inactive grid-f"><span>Inactive</span></div>
+            <div class="line"></div>
+          </div>
+          <div class="table-body"><span class="grid-a">Marvin McKinney</span><span class="grid-b">Tesla</span><span class="grid-c">(252)555-0126</span><span class="grid-d">marvin@tesla.com</span><span class="grid-e">Iran</span>
+            <div class="status active grid-f"><span>Active</span></div>
+            <div class="line"></div>
+          </div>
+          <div class="table-body"><span class="grid-a">Jerome Bell</span><span class="grid-b">Google</span><span class="grid-c">(629)555-0129</span><span class="grid-d">jerome@google.com</span><span class="grid-e">Reunion</span>
+            <div class="status active grid-f"><span>Active</span></div>
+            <div class="line"></div>
+          </div>
+          <div class="table-body"><span class="grid-a">Kathryn Murphy</span><span class="grid-b">Microsoft</span><span class="grid-c">(406)555-0120</span><span class="grid-d">kathtyn@microsoft.com</span><span class="grid-e">Curacao</span>
+            <div class="status active grid-f"><span>Active</span></div>
+            <div class="line"></div>
+          </div>
+          <div class="table-body"><span class="grid-a">Jacob Jones</span><span class="grid-b">Yahoo</span><span class="grid-c">(208)555-0112</span><span class="grid-d">jacob@yahoo.com</span><span class="grid-e">Brazil</span>
+            <div class="status active grid-f"><span>Active</span></div>
+            <div class="line"></div>
+          </div>
+          <div class="table-body"><span class="grid-a">Kristin Watson</span><span class="grid-b">facebook</span><span class="grid-c">(704)555-0127</span><span class="grid-d">kristin@facebook.com</span><span class="grid-e">Aland Island</span>
+            <div class="status inactive grid-f"><span>Inactive</span></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <footer><span>Showing data 1 to 8 of 256K entries</span>
+          <div class="buttons">
+            <button> <span><</span></button>
+            <button class="active"><span>1</span></button>
+            <button><span>2</span></button>
+            <button> <span>3</span></button><span>... </span>
+            <button><span>40</span></button>
+            <button><span>></span></button>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

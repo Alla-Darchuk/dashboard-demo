@@ -1,0 +1,291 @@
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  background-color: #FAFBFF;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 306px;
+  background-color: white;
+  padding: 28px;
+}
+nav .nav_header {
+  padding: 36px auto 20px 0px;
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+}
+nav .nav_header span {
+  font-size: 10px;
+  color: #9197b3;
+}
+nav ul {
+  list-style-type: none;
+  margin: 20px 0px;
+  padding: 0;
+  font-size: 14px;
+}
+nav ul .item-section {
+  display: grid;
+  grid-template-columns: 24px auto 20px;
+  gap: 14px;
+  color: #9197b3;
+  max-width: 250px;
+  width: 250px;
+  height: 24px;
+  align-items: center;
+  padding: 11px;
+  margin: 10px 0px;
+  border-radius: 8px;
+}
+nav ul .item-section:hover {
+  background-color: #5932EA;
+  color: #fff;
+}
+nav .nav_footer {
+  display: flex;
+}
+nav .nav_footer img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+nav .nav_footer h2 {
+  margin: 0;
+  font-size: 14px;
+}
+nav .nav_footer p {
+  margin: 0;
+  font-size: 12px;
+  color: #9197b3;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.chevron {
+  font-size: 16px;
+}
+
+.content {
+  background-color: #FAFBFF;
+  padding-top: 41px;
+  padding-left: 71px;
+}
+.content .header {
+  color: black;
+}
+.content .header h1 {
+  font-size: 24px;
+}
+.content .division {
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px 38px 45px 38px;
+}
+.content .division .division-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.content .division .division-header .information h2 {
+  margin: 0;
+  font-size: 22px;
+}
+.content .division .division-header .information p {
+  color: #16C098;
+  font-size: 14px;
+}
+.content .division .division-header .search {
+  border: none;
+  border-radius: 10px;
+  background-color: #FAFBFF;
+  width: 216px;
+  color: #9197b3;
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+.content .division .division-header .search .icon {
+  color: #9197b3;
+  width: 24px;
+  height: 24px;
+  margin: 7px 8px;
+}
+.content .division .division-header .search input {
+  width: 100%;
+  border: none;
+  background: none;
+}
+.content .division .division-header .search input::-moz-placeholder {
+  color: #9197b3;
+}
+.content .division .division-header .search input::placeholder {
+  color: #9197b3;
+}
+.content .division .division-header .search input:focus, .content .division .division-header .search input:hover {
+  outline: none;
+  border: none;
+}
+.content .division .table {
+  font-size: 14px;
+}
+.content .division .table .table-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr 1fr;
+  color: #9197b3;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  margin-bottom: 25px;
+}
+.content .division .table .table-head .status {
+  text-align: center;
+}
+.content .division .table .table-body {
+  display: grid;
+  grid-template-areas: "a b c d e f" "g g g g g g";
+  grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr 1fr;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  row-gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #292D32;
+}
+.content .division .table .table-body .grid-a {
+  grid-area: a;
+}
+.content .division .table .table-body .grid-b {
+  grid-area: b;
+}
+.content .division .table .table-body .grid-c {
+  grid-area: c;
+}
+.content .division .table .table-body .grid-d {
+  grid-area: d;
+}
+.content .division .table .table-body .grid-e {
+  grid-area: e;
+}
+.content .division .table .table-body .grid-f {
+  grid-area: f;
+}
+.content .division .table .table-body .line {
+  grid-area: g;
+  width: 98%;
+  height: 1px;
+  background-color: #9197b3;
+}
+.content .division .table .table-body .status {
+  width: 80px;
+  height: 30px;
+  justify-self: center;
+  align-self: center;
+  border: solid 1px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .division .table .table-body .active {
+  background-color: rgba(22, 192, 152, 0.5803921569);
+  border-color: #008767;
+}
+.content .division .table .table-body .active span {
+  color: #008767;
+}
+.content .division .table .table-body .inactive {
+  background-color: #FFC5C5;
+  border-color: #DF0404;
+}
+.content .division .table .table-body .inactive span {
+  color: #DF0404;
+}
+.content .division footer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .division footer span {
+  font-size: 14px;
+  color: #9197b3;
+}
+.content .division footer .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.content .division footer .buttons span {
+  color: #292D32;
+}
+.content .division footer .buttons button {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #EEEEEE;
+  border-radius: 4px;
+  margin: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .division footer .buttons button span {
+  font-weight: bold;
+  font-size: 12px;
+  color: #9197b3;
+  margin: 0;
+  padding: 0;
+}
+.content .division footer .buttons .active {
+  color: rgba(22, 192, 152, 0.5803921569);
+  background-color: rgba(22, 192, 152, 0.5803921569);
+  border-color: #008767;
+}
+.content .division footer .buttons .active span {
+  color: white;
+}
+
+@media screen and (max-width: 720px) {
+  nav {
+    width: 60px;
+    padding: 10px;
+  }
+  nav .item-section {
+    width: 15px;
+  }
+  nav h1 {
+    display: none;
+  }
+  nav .section {
+    display: none;
+  }
+  nav .user-information {
+    display: none;
+  }
+  .content {
+    margin: 10px;
+    padding: 0px;
+  }
+  .content .division {
+    padding: 10px 10px 25px 10px;
+  }
+  .content .division .table .table-body, .content .division .table .table-head {
+    gap: 10px;
+  }
+  .content .division .table .table-body .status, .content .division .table .table-head .status {
+    width: 50%;
+  }
+  .content .division footer {
+    flex-wrap: wrap;
+  }
+  .content .division footer .buttons {
+    margin: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */

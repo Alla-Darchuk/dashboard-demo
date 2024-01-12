@@ -1,0 +1,302 @@
+$text-color: #9197b3;
+$backgroung-color: #FAFBFF;
+$hover-color:#5932EA;
+$background-active: #16c09894;
+$color-active: #008767;
+$background-unactive: #FFC5C5;
+$color-unactive: #DF0404;
+$users-color: #292D32;
+
+
+
+body{
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  background-color: $backgroung-color;
+  width: 100%;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 306px;
+  background-color: white;
+  padding: 28px;
+  .nav_header {
+      padding: 36px auto 20px 0px;
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      span{
+        font-size: 10px;
+        color: $text-color;
+        }
+      }
+  ul {
+      list-style-type: none;
+      margin: 20px 0px;
+      padding: 0;
+      font-size: 14px;
+      .item-section {
+          display: grid;
+          grid-template-columns: 24px auto 20px;
+          gap:14px;
+          color: $text-color;
+          max-width: 250px;
+          width: 250px;
+          height: 24px;
+          align-items: center;
+          padding: 11px;
+          margin: 10px 0px;
+          border-radius: 8px;
+          &:hover{
+            background-color: $hover-color;
+            color: #fff
+          }
+        }
+    }
+    .nav_footer {
+      display: flex;
+      
+      img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+      h2{
+        margin: 0;
+        font-size: 14px;
+      }
+      p{
+        margin: 0;
+        font-size: 12px;
+        color:$text-color;
+      }
+    }
+}
+.icon{
+  font-size: 24px;
+}
+.chevron{
+  font-size: 16px;
+}
+.content{
+  background-color: $backgroung-color;
+  padding-top: 41px;
+  padding-left: 71px;
+  .header{
+    color:black;
+    h1{
+      font-size: 24px;
+    }
+    
+  }
+  .division{
+    background-color: white;
+    border-radius: 30px;
+    padding: 30px 38px 45px 38px;
+    .division-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      .information{
+        h2 {
+            margin: 0;
+            font-size: 22px;
+          }
+        
+          p {
+            color: #16C098;
+            font-size: 14px;
+          }
+      }
+      .search{
+        border:none;
+        border-radius: 10px;
+        background-color: $backgroung-color;
+        width: 216px;
+        color: $text-color;
+        display: flex;
+        align-items: center;
+        padding-right: 8px;
+        .icon{
+          color: $text-color;
+          width: 24px;
+          height: 24px;
+          margin: 7px 8px;
+        }
+        input{
+          width: 100%;
+          border: none;
+          background: none;
+          &::placeholder{
+            color: $text-color;
+          }
+          &:focus, &:hover{
+            outline: none;
+            border:none;
+          }
+        }
+      }
+    }
+    .table{
+      font-size: 14px;
+      .table-head{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr 1fr;
+        color: $text-color;
+        column-gap:25px;
+        margin-bottom: 25px;
+        .status{
+          text-align: center;
+        }
+      }
+      .table-body{
+        display: grid;
+        grid-template-areas:
+        "a b c d e f"
+        "g g g g g g";
+        grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr 1fr;
+        column-gap: 25px;
+        row-gap: 20px;
+        align-items: center;
+        margin-bottom: 20px;
+        color: $users-color;
+        .grid-a{
+          grid-area: a;
+        }
+        .grid-b{
+          grid-area: b;
+        }
+        .grid-c{
+          grid-area: c;
+        }
+        .grid-d{
+          grid-area: d;
+        }
+        .grid-e{
+          grid-area: e;
+        }
+        .grid-f{
+          grid-area: f;
+        }
+        .line{
+          grid-area: g;
+          width: 98%;
+          height: 1px;
+          background-color: $text-color;
+        }
+        .status {
+          width: 80px;
+          height: 30px;
+          justify-self: center;
+          align-self: center;
+          border: solid 1px;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .active{
+          background-color: $background-active;
+          border-color: $color-active;
+          span{
+            color: $color-active;
+          }
+        }
+        .inactive {
+          background-color: $background-unactive;
+          border-color: $color-unactive;
+          span {
+              color: $color-unactive;
+          }
+        }
+      }
+    }
+    footer{
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span{
+        font-size: 14px;
+        color: $text-color;
+      }
+      .buttons{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        span{
+          color: $users-color;
+        }
+        button{
+          width: 20px;
+          height: 20px;
+          border: 1px solid #EEEEEE;
+          border-radius: 4px;
+          margin: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span{
+            font-weight: bold;
+            font-size: 12px;
+            color: $text-color;
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .active{
+          color: $background-active;
+          background-color: $background-active;
+          border-color: $color-active;
+          span{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  nav{
+    width: 60px;
+    padding: 10px;
+    .item-section{
+      width: 15px;
+    }
+    h1 {
+        display: none;
+      }
+    .section {
+      display: none;
+    }
+    .user-information {
+      display: none;
+    }
+  }
+  .content{
+    margin: 10px;
+    padding: 0px;
+    .division{
+      padding: 10px 10px 25px 10px;
+      .table{
+       .table-body, .table-head{
+          gap:10px;
+          .status{
+            width: 50%;
+          }
+        }
+      }
+      footer{
+        flex-wrap: wrap;
+        .buttons{
+          margin: 5px;
+        }
+      }
+      
+    }
+  }
+}

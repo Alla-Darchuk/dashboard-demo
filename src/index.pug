@@ -1,0 +1,105 @@
+doctype html
+html(lang="en")
+  head 
+    title Dashboard test
+    link(rel="stylesheet", href="images/icomoon/style.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap")
+    style 
+      include styles/style.css
+  body 
+    -
+      var navSections = [
+        { icon: 'icon-dashboard', text: "Dashboard", expansion: false },
+        { icon: 'icon-product', text: "Product", expansion: true },
+        { icon: 'icon-customers', text: "Customers", expansion: true },
+        { icon: 'icon-income', text: "Income", expansion: true },
+        { icon: 'icon-promote', text: "Promote", expansion: true },
+        { icon: 'icon-help', text: "Help", expansion: true }
+      ]
+    -   
+      var user = {
+          name:"Ivan",
+          position:"Project Manager",
+          photo:'images/Ellipse 8.png'
+        }
+    -
+      var customers =[
+        {name:"Jane Cooper", company:"Microsoft", phone:'(225)555-0118', email:'jane@microsoft.com', contry:"United States", status:true},
+        {name:"Floyd Miles", company:"Yahoo", phone:'(205)555-0100', email:'floyd@yahoo.com', contry:"Kiribati", status:false},
+        {name:"Ronald Richards", company:"Adobe", phone:'(302)555-0107', email:'ronald@adobe.com', contry:"Israel", status:false},
+        {name:"Marvin McKinney", company:"Tesla", phone:'(252)555-0126', email:'marvin@tesla.com', contry:"Iran", status:true},
+        {name:"Jerome Bell", company:"Google", phone:'(629)555-0129', email:'jerome@google.com', contry:"Reunion", status:true},
+        {name:"Kathryn Murphy", company:"Microsoft", phone:'(406)555-0120', email:'kathtyn@microsoft.com', contry:"Curacao", status:true},
+        {name:"Jacob Jones", company:"Yahoo", phone:'(208)555-0112', email:'jacob@yahoo.com', contry:"Brazil", status:true},
+        {name:"Kristin Watson", company:"facebook", phone:'(704)555-0127', email:'kristin@facebook.com', contry:"Aland Island", status:false},
+      ]
+    -
+      var pages = 40;
+    nav 
+      content 
+        include modules/header-nav.pug
+        ul 
+          each item in navSections || []
+            li.item-section
+              span(class=item.icon class='icon')
+              span.section #{item.text}
+              if item.expansion
+                span(class='icon-chevron-right chevron')
+      footer.nav_footer 
+        img(src=user.photo, alt="")
+        .user-information 
+          h2=user.name
+          p=user.position
+
+    .content
+      include modules/header-content.pug  
+      .division
+        .division-header 
+          .information 
+            h2 All Customers 
+            p Active Members
+          .search
+            .icon(class="icon-search")
+            input(type="search", placeholder="Search" )
+        .table 
+          .table-head
+              span Customer Name 
+              span Company 
+              span Phone Number
+              span Email 
+              span Country
+              span.status Status
+          each customer in customers
+            .table-body
+                span.grid-a=customer.name 
+                span.grid-b=customer.company 
+                span.grid-c=customer.phone 
+                span.grid-d=customer.email 
+                span.grid-e=customer.contry 
+                if customer.status
+                  .status(class="active grid-f" )
+                    span Active
+                else
+                  .status(class="inactive grid-f")
+                    span Inactive
+                .line
+        footer
+          span Showing data 1 to 8 of 256K entries
+          .buttons
+            if pages>1 
+              button 
+                span <
+              if pages>5 
+                button.active
+                  span 1
+                button
+                  span 2
+                button 
+                  span 3
+                span ... 
+                button
+                  span 40
+              button
+                span >
